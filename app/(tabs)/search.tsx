@@ -4,7 +4,7 @@ import React from 'react'
 const Search = () => {
   return (
     <View>
-      <Text>S</Text>
+      <Text>Search</Text>
     </View>
   )
 }
