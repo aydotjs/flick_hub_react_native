@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "movie_app_react_native",
-    "slug": "movie_app_react_native",
+    "name": "flick_hub",
+    "slug": "flick_hub",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
