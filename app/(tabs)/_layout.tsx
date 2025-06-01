@@ -11,7 +11,7 @@ const TabIcon = ({ focused, icon, title }: any) => {
     return (
       <ImageBackground
         source={images.highlight}
-        className="flex flex-row w-full flex-1 min-w-[112px] min-h-16 justify-center items-center rounded-full overflow-hidden"
+        className="flex flex-row w-full flex-1 min-w-[112px] min-h-16 justify-center mt-4 items-center rounded-full overflow-hidden"
       >
         <Image source={icon} tintColor="#151312" className="size-5" />
         <Text className="text-secondary text-base font-semibold ml-2">
@@ -23,7 +23,7 @@ const TabIcon = ({ focused, icon, title }: any) => {
   // When tab is inactive, show just the icon in a minimal style
   return (
     <View className="size-full  justify-center items-center rounded-full mt-4">
-      <Image source={icon} tintColor="#A8B5DB" className="size-5" />
+      <Image source={icon} tintColor="#A8B5DD" className="size-5" />
     </View>
   );
 };
@@ -37,8 +37,10 @@ const _Layout = () => {
         tabBarItemStyle: {
           width: "100%",
           height: "100%",
-          justifyContent: "center",
+          justifyContent: "flex-end",
           alignItems: "center",
+          
+          
         },
         tabBarStyle: {
           backgroundColor: "#0f0D23", // Custom dark background
@@ -69,7 +71,7 @@ const _Layout = () => {
 
       {/* Search Tab */}
       <Tabs.Screen
-        name="profile"
+        name="search"
         options={{
           headerShown: false,
           title: "Search",
@@ -97,7 +99,7 @@ const _Layout = () => {
 
       {/* Profile Tab */}
       <Tabs.Screen
-        name="search"
+        name="profile"
         options={{
           headerShown: false,
           title: "Profile",
