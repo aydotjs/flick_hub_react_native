@@ -15,8 +15,10 @@ import useFetch from "@/services/useFetch";
 import { fetchMovies } from "@/services/api";
 import MovieDetails from "../movies/[id]";
 import MovieCard from "@/components/MovieCard";
+import { useState } from "react";
 export default function Index() {
   const router = useRouter();
+  const [searchQuery, setSearchQuery] = useState("")
   const {
     data: movies,
     loading: moviesLoading,
@@ -38,13 +40,15 @@ export default function Index() {
             className="mt-10 self-center"
           />
         ) : moviesError ? (
-          <Text>Error : moviesEror?.message</Text>
+          <Text>Error : moviesError?.message</Text>
         ) : (
           <View className="flex-1 mt-5">
             <SearchBar
               onPress={() => {
                 router.push("/search");
               }}
+              value={searchQuery}
+              onChangeText={setSearchQuery} 
               placeholder="Search for a movie"
             />
             <>
